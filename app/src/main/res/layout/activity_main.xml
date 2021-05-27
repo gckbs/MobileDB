@@ -13,12 +13,41 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="#BBFF3300">
+
         <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:columnCount="3">
+            android:columnCount="4">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아침"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="점심"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="저녁"
+                android:layout_gravity="fill_horizontal"
+                android:gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="월요일"/>
             <TextView
                 android:id="@+id/textview1Breakfast"
                 android:layout_width="wrap_content"
@@ -35,14 +64,13 @@
                 android:layout_height="wrap_content"
                 android:text="DINNER"/>
 
-        </GridLayout>
 
-        <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:columnCount="3">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="화요일"/>
             <TextView
                 android:id="@+id/textview2Breakfast"
                 android:layout_width="wrap_content"
@@ -59,14 +87,13 @@
                 android:layout_height="wrap_content"
                 android:text="DINNER"/>
 
-        </GridLayout>
 
-        <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:columnCount="3">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="수요일"/>
             <TextView
                 android:id="@+id/textview3Breakfast"
                 android:layout_width="wrap_content"
@@ -83,13 +110,13 @@
                 android:layout_height="wrap_content"
                 android:text="DINNER"/>
 
-        </GridLayout>
 
-        <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:columnCount="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="목요일"/>
 
             <TextView
                 android:id="@+id/textview4Breakfast"
@@ -107,13 +134,13 @@
                 android:layout_height="wrap_content"
                 android:text="DINNER"/>
 
-        </GridLayout>
 
-        <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:columnCount="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="금요일"/>
 
             <TextView
                 android:id="@+id/textview5Breakfast"
@@ -131,13 +158,13 @@
                 android:layout_height="wrap_content"
                 android:text="DINNER"/>
 
-        </GridLayout>
 
-        <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:columnCount="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="토요일"/>
 
             <TextView
                 android:id="@+id/textview6Breakfast"
@@ -155,13 +182,13 @@
                 android:layout_height="wrap_content"
                 android:text="DINNER"/>
 
-        </GridLayout>
 
-        <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:columnCount="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="일요일"/>
 
             <TextView
                 android:id="@+id/textview7Breakfast"

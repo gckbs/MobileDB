@@ -41,40 +41,68 @@ import java.util.Iterator;
 public class MainActivity extends AppCompatActivity {
 
     final int CREATE_DIET = 0;
-    int diet_order = 1;
+    private int diet_order = 1;
 
-    TextView textview1Breakfast = findViewById(R.id.textview1Breakfast);
-    TextView textview1Lunch = findViewById(R.id.textview1Lunch);
-    TextView textview1Dinner = findViewById(R.id.textview1Dinner);
+    TextView textview1Breakfast;
+    TextView textview1Lunch;
+    TextView textview1Dinner;
 
-    TextView textview2Breakfast = findViewById(R.id.textview2Breakfast);
-    TextView textview2Lunch = findViewById(R.id.textview2Lunch);
-    TextView textview2Dinner = findViewById(R.id.textview2Dinner);
+    TextView textview2Breakfast;
+    TextView textview2Lunch;
+    TextView textview2Dinner;
 
-    TextView textview3Breakfast = findViewById(R.id.textview3Breakfast);
-    TextView textview3Lunch = findViewById(R.id.textview3Lunch);
-    TextView textview3Dinner = findViewById(R.id.textview3Dinner);
+    TextView textview3Breakfast;
+    TextView textview3Lunch;
+    TextView textview3Dinner;
 
-    TextView textview4Breakfast = findViewById(R.id.textview4Breakfast);
-    TextView textview4Lunch = findViewById(R.id.textview4Lunch);
-    TextView textview4Dinner = findViewById(R.id.textview4Dinner);
+    TextView textview4Breakfast;
+    TextView textview4Lunch;
+    TextView textview4Dinner;
 
-    TextView textview5Breakfast = findViewById(R.id.textview5Breakfast);
-    TextView textview5Lunch = findViewById(R.id.textview5Lunch);
-    TextView textview5Dinner = findViewById(R.id.textview5Dinner);
+    TextView textview5Breakfast;
+    TextView textview5Lunch;
+    TextView textview5Dinner;
 
-    TextView textview6Breakfast = findViewById(R.id.textview6Breakfast);
-    TextView textview6Lunch = findViewById(R.id.textview6Lunch);
-    TextView textview6Dinner = findViewById(R.id.textview6Dinner);
+    TextView textview6Breakfast;
+    TextView textview6Lunch;
+    TextView textview6Dinner;
 
-    TextView textview7Breakfast = findViewById(R.id.textview7Breakfast);
-    TextView textview7Lunch = findViewById(R.id.textview7Lunch);
-    TextView textview7Dinner = findViewById(R.id.textview7Dinner);
+    TextView textview7Breakfast;
+    TextView textview7Lunch;
+    TextView textview7Dinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        textview1Breakfast = findViewById(R.id.textview1Breakfast);
+        textview1Lunch = findViewById(R.id.textview1Lunch);
+        textview1Dinner = findViewById(R.id.textview1Dinner);
+
+        textview2Breakfast = findViewById(R.id.textview2Breakfast);
+        textview2Lunch = findViewById(R.id.textview2Lunch);
+        textview2Dinner = findViewById(R.id.textview2Dinner);
+
+        textview3Breakfast = findViewById(R.id.textview3Breakfast);
+        textview3Lunch = findViewById(R.id.textview3Lunch);
+        textview3Dinner = findViewById(R.id.textview3Dinner);
+
+        textview4Breakfast = findViewById(R.id.textview4Breakfast);
+        textview4Lunch = findViewById(R.id.textview4Lunch);
+        textview4Dinner = findViewById(R.id.textview4Dinner);
+
+        textview5Breakfast = findViewById(R.id.textview5Breakfast);
+        textview5Lunch = findViewById(R.id.textview5Lunch);
+        textview5Dinner = findViewById(R.id.textview5Dinner);
+
+        textview6Breakfast = findViewById(R.id.textview6Breakfast);
+        textview6Lunch = findViewById(R.id.textview6Lunch);
+        textview6Dinner = findViewById(R.id.textview6Dinner);
+
+        textview7Breakfast = findViewById(R.id.textview7Breakfast);
+        textview7Lunch = findViewById(R.id.textview7Lunch);
+        textview7Dinner = findViewById(R.id.textview7Dinner);
 
         ControlDB control = new ControlDB();
         control.SetAllToNotUsed("밥");
@@ -84,7 +112,6 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(intent, CREATE_DIET);
 
     }
-
     // 식단정보 받아와서 GridLayout에 세팅
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -99,14 +126,14 @@ public class MainActivity extends AppCompatActivity {
                 String received_dinner_nutritions = data.getStringExtra("DINNER_NUTRITIONS");
 
                 Log.d("test", "작업완료");
-//                Log.d("test", "received_breakfast_info: " + received_breakfast_info);
-//                Log.d("test", "received_lunch_info: " + received_breakfast_info);
-//                Log.d("test", "received_dinner_info: " + received_breakfast_info);
-//                Log.d("test", "received_breakfast_nutritions: " + received_breakfast_nutritions);
-//                Log.d("test", "received_lunch_nutritions: " + received_lunch_nutritions);
-//                Log.d("test", "received_dinner_nutritions: " + received_dinner_nutritions);
+                Log.d("test", "received_breakfast_info: " + received_breakfast_info);
+                Log.d("test", "received_lunch_info: " + received_lunch_info);
+                Log.d("test", "received_dinner_info: " + received_dinner_info);
+                Log.d("test", "received_breakfast_nutritions: " + received_breakfast_nutritions);
+                Log.d("test", "received_lunch_nutritions: " + received_lunch_nutritions);
+                Log.d("test", "received_dinner_nutritions: " + received_dinner_nutritions);
 
-                // 데이터 UI에 세팅하기
+//                 데이터 UI에 세팅하기
                 switch(diet_order){
                     case 1:
                         textview1Breakfast.setText(received_breakfast_info);

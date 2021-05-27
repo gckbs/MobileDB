@@ -17,12 +17,17 @@ public class CreateDiet extends AppCompatActivity{
     private int what_time_rice = 0;
     private int what_time_maindish = 0;
     private int what_time_sidedish = 0;
-    private int flag_protein = 10;
-    private int flag_carbo = 10;
-    private int flag_fat = 10;
+
+    private int flag_carbo = 150;
+    private int flag_protein = 50;
+    private int flag_fat = 50;
     private double target_protein = 0;
     private double target_carbo = 0;
     private double target_fat = 0;
+
+    private boolean token_rice = false;
+    private boolean token_maindish = true;
+    private boolean token_sidedish = true;
 
     TextView breakfast;
     TextView lunch;
@@ -47,6 +52,11 @@ public class CreateDiet extends AppCompatActivity{
         Callback callback_rice = new Callback(){
             @Override
             public void success(String str, Food food){
+                // 토큰을 통한 synchronization
+                while(token_rice);
+                token_rice = true;
+                Log.d("test"," token_rice ON");
+
                 Log.d("callback","Callback result: " + str);
                 Log.d("callback", "parameter_what_time: "+what_time_rice);
                 daydiet[what_time_rice].plusFood(food);
@@ -60,6 +70,9 @@ public class CreateDiet extends AppCompatActivity{
                 } else {
                     what_time_rice = what_time_rice+1;
                 }
+                token_rice = false;
+                if(what_time_rice == 2) token_maindish = false;
+                Log.d("test", " token_rice OFF");
             }
             @Override
             public void fail(String message){
@@ -70,6 +83,10 @@ public class CreateDiet extends AppCompatActivity{
         Callback callback_maindish = new Callback(){
             @Override
             public void success(String str, Food food){
+                while(token_maindish || token_rice);
+                token_maindish = true;
+                Log.d("test"," token_maindish ON");
+
                 Log.d("callback", "Callback result: " + str);
                 Log.d("callback", "parameter_what_time: " + what_time_maindish);
                 daydiet[what_time_maindish].plusFood(food);
@@ -82,6 +99,10 @@ public class CreateDiet extends AppCompatActivity{
                 } else {
                     what_time_maindish = what_time_maindish + 1;
                 }
+
+                token_maindish = false;
+                if(what_time_maindish == 2) token_sidedish = false;
+                Log.d("test",food.getName() + " token_maindish OFF");
             }
             @Override
             public void fail(String message){
@@ -92,6 +113,9 @@ public class CreateDiet extends AppCompatActivity{
         Callback callback_sidedish = new Callback(){
             @Override
             public void success(String str, Food food){
+                while(token_maindish || token_rice || token_sidedish);
+                token_sidedish = true;
+
                 if((target_carbo < flag_carbo) && (target_protein < flag_protein) && (target_fat < flag_fat)) {
                     Log.d("callback","Callback result: " + str);
                     Log.d("callback", "parameter_what_time: "+what_time_sidedish);
@@ -108,6 +132,7 @@ public class CreateDiet extends AppCompatActivity{
                     }
                 }
                 else{
+                    Log.d("test", "사이드 else 진입");
                     Intent intent = getIntent();
                     intent.putExtra("BREAKFAST_INFO", daydiet[0].returnDietToString());
                     intent.putExtra("BREAKFAST_NUTRITIONS", daydiet[0].returnNutritions());
@@ -118,6 +143,8 @@ public class CreateDiet extends AppCompatActivity{
                     setResult(RESULT_OK, intent);
                     finish();
                 }
+
+                token_sidedish = false;
             }
             @Override
             public void fail(String message){
@@ -130,16 +157,17 @@ public class CreateDiet extends AppCompatActivity{
             // 세 영양성분 중 하나라도 권장섭취량을 넘어가면 out
             daydiet[meals] = new OneDiet();
             Food food = new Food("밥", callback_rice);
-            Food main_dish = new Food("반찬(메인)", callback_maindish);
-            Food side_dish = new Food("반찬(사이드)", callback_sidedish);
             // callback_sidedish에 권장섭취량 초과하면 그만 추가하는 기능 추가하기
             // 추가할 음식(밥) firebase에서 받아와서 위 변수에 저장
         }
+        for(int meals=0; meals<3; meals++) {
+            Food main_dish = new Food("반찬(메인)", callback_maindish);
+        }
 
         // 아침, 점심, 저녁 나머지 권장섭취량만큼 반찬(사이드) 채우기
-//        while(true){
-//            Food side_dish = new Food("반찬(사이드)", callback_maindish);
-//        }
+        for(int meals=0; meals<3; meals++) {
+            Food side_dish = new Food("반찬(사이드)", callback_sidedish);
+        }
     }
 
     public void increaseTarget(Food food){

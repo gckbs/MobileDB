@@ -48,9 +48,9 @@ public class OneDiet {
     public String returnDietToString(){
         String names = "";
         if(getFoods_nameArrayList().size() > 0) {
-            for (int i = 0; i <getFoods_nameArrayList().size(); i++){
-                names.concat(getFoods_nameArrayList().get(i)+", ");
-            }
+            for (int i = 0; i <getFoods_nameArrayList().size(); i++)
+                names = names.concat(getFoods_nameArrayList().get(i) + "\n");
+            names = names.substring(0, names.length() - 1);
         }
         return names;
     }
