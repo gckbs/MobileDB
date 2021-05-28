@@ -18,8 +18,8 @@ public class CreateDiet extends AppCompatActivity{
     private int what_time_maindish = 0;
     private int what_time_sidedish = 0;
 
-    private int flag_carbo = 150;
-    private int flag_protein = 50;
+    private int flag_carbo = 200;
+    private int flag_protein = 150;
     private int flag_fat = 50;
     private double target_protein = 0;
     private double target_carbo = 0;
@@ -28,11 +28,6 @@ public class CreateDiet extends AppCompatActivity{
     private boolean token_rice = false;
     private boolean token_maindish = true;
     private boolean token_sidedish = true;
-
-    TextView breakfast;
-    TextView lunch;
-    TextView dinner;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,6 +110,7 @@ public class CreateDiet extends AppCompatActivity{
             public void success(String str, Food food){
                 while(token_maindish || token_rice || token_sidedish);
                 token_sidedish = true;
+                Log.d("test"," token_sidedish ON");
 
                 if((target_carbo < flag_carbo) && (target_protein < flag_protein) && (target_fat < flag_fat)) {
                     Log.d("callback","Callback result: " + str);
@@ -145,6 +141,7 @@ public class CreateDiet extends AppCompatActivity{
                 }
 
                 token_sidedish = false;
+                Log.d("test",food.getName() + " token_sidedish OFF");
             }
             @Override
             public void fail(String message){
@@ -165,7 +162,7 @@ public class CreateDiet extends AppCompatActivity{
         }
 
         // 아침, 점심, 저녁 나머지 권장섭취량만큼 반찬(사이드) 채우기
-        for(int meals=0; meals<3; meals++) {
+        for(int meals=0; meals<20; meals++) {
             Food side_dish = new Food("반찬(사이드)", callback_sidedish);
         }
     }

@@ -3,65 +3,87 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:background="#7cfc00"
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="#BBFF3300">
 
-        <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:columnCount="4">
+            android:layout_weight="1"
+            android:columnCount="4"
+            android:alignmentMode="alignBounds">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="fill_horizontal"/>
+                android:layout_gravity="fill_horizontal"
+                android:background="@drawable/time_edge"
+                android:layout_columnWeight="1" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="아침"
                 android:layout_gravity="fill_horizontal"
-                android:gravity="center_horizontal"/>
+                android:gravity="center_horizontal"
+                android:background="@drawable/time_edge"
+                android:layout_columnWeight="3"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="점심"
                 android:layout_gravity="fill_horizontal"
-                android:gravity="center_horizontal"/>
+                android:gravity="center_horizontal"
+                android:background="@drawable/time_edge"
+                android:layout_columnWeight="3"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="저녁"
+                android:layout_columnWeight="3"
                 android:layout_gravity="fill_horizontal"
-                android:gravity="center_horizontal"/>
+                android:gravity="center_horizontal"
+                android:background="@drawable/time_edge"
+                android:text="저녁" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
+                android:background="@drawable/day_edge"
+                android:layout_gravity="fill_vertical"
                 android:text="월요일"/>
             <TextView
                 android:id="@+id/textview1Breakfast"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="fill"
+                android:background="@drawable/edge"
                 android:text="BREAKFAST"/>
             <TextView
                 android:id="@+id/textview1Lunch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="fill"
+                android:background="@drawable/edge"
                 android:text="LUNCH"/>
             <TextView
                 android:id="@+id/textview1Dinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="fill"
+                android:background="@drawable/edge"
                 android:text="DINNER"/>
 
 
@@ -70,21 +92,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
+                android:background="@drawable/day_edge"
+                android:layout_gravity="fill_vertical"
                 android:text="화요일"/>
             <TextView
                 android:id="@+id/textview2Breakfast"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="fill"
+                android:background="@drawable/edge"
                 android:text="BREAKFAST"/>
             <TextView
                 android:id="@+id/textview2Lunch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="fill"
+                android:background="@drawable/edge"
                 android:text="LUNCH"/>
             <TextView
                 android:id="@+id/textview2Dinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="fill"
+                android:background="@drawable/edge"
                 android:text="DINNER"/>
 
 
@@ -93,21 +126,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
+                android:background="@drawable/day_edge"
+                android:layout_gravity="fill_vertical"
                 android:text="수요일"/>
             <TextView
                 android:id="@+id/textview3Breakfast"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="fill"
+                android:background="@drawable/edge"
                 android:text="BREAKFAST"/>
             <TextView
                 android:id="@+id/textview3Lunch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="fill"
+                android:background="@drawable/edge"
                 android:text="LUNCH"/>
             <TextView
                 android:id="@+id/textview3Dinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="fill"
+                android:background="@drawable/edge"
                 android:text="DINNER"/>
 
 
@@ -116,22 +160,33 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
+                android:background="@drawable/day_edge"
+                android:layout_gravity="fill_vertical"
                 android:text="목요일"/>
 
             <TextView
                 android:id="@+id/textview4Breakfast"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="fill"
+                android:background="@drawable/edge"
                 android:text="BREAKFAST"/>
             <TextView
                 android:id="@+id/textview4Lunch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="fill"
+                android:background="@drawable/edge"
                 android:text="LUNCH"/>
             <TextView
                 android:id="@+id/textview4Dinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="fill"
+                android:background="@drawable/edge"
                 android:text="DINNER"/>
 
 
@@ -140,22 +195,33 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
+                android:background="@drawable/day_edge"
+                android:layout_gravity="fill_vertical"
                 android:text="금요일"/>
 
             <TextView
                 android:id="@+id/textview5Breakfast"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="fill"
+                android:background="@drawable/edge"
                 android:text="BREAKFAST"/>
             <TextView
                 android:id="@+id/textview5Lunch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="fill"
+                android:background="@drawable/edge"
                 android:text="LUNCH"/>
             <TextView
                 android:id="@+id/textview5Dinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="fill"
+                android:background="@drawable/edge"
                 android:text="DINNER"/>
 
 
@@ -164,22 +230,33 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
+                android:background="@drawable/day_edge"
+                android:layout_gravity="fill_vertical"
                 android:text="토요일"/>
 
             <TextView
                 android:id="@+id/textview6Breakfast"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="fill"
+                android:background="@drawable/edge"
                 android:text="BREAKFAST"/>
             <TextView
                 android:id="@+id/textview6Lunch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="fill"
+                android:background="@drawable/edge"
                 android:text="LUNCH"/>
             <TextView
                 android:id="@+id/textview6Dinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="fill"
+                android:background="@drawable/edge"
                 android:text="DINNER"/>
 
 
@@ -188,22 +265,33 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
+                android:background="@drawable/day_edge"
+                android:layout_gravity="fill_vertical"
                 android:text="일요일"/>
 
             <TextView
                 android:id="@+id/textview7Breakfast"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="fill"
+                android:background="@drawable/edge"
                 android:text="BREAKFAST"/>
             <TextView
                 android:id="@+id/textview7Lunch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="fill"
+                android:background="@drawable/edge"
                 android:text="LUNCH"/>
             <TextView
                 android:id="@+id/textview7Dinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_gravity="fill"
+                android:background="@drawable/edge"
                 android:text="DINNER"/>
 
         </GridLayout>

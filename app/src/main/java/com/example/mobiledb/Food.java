@@ -33,11 +33,11 @@ public class Food {
 //                callback.success("DB 진입");
                 while(is_used) {
                     if (category == "밥")
-                        setNum((int) (Math.random() * 26));
+                        setNum((int) (Math.random() * 25));
                     else if (category == "반찬(메인)")
-                        setNum((int) (Math.random() * 458));
+                        setNum((int) (Math.random() * 448));
                     else if (category == "반찬(사이드)")
-                        setNum((int) (Math.random() * 359));
+                        setNum((int) (Math.random() * 267));
                     else{
                         Log.d("error", "Food_category_error");
                         return;

@@ -108,8 +108,27 @@ public class MainActivity extends AppCompatActivity {
         control.SetAllToNotUsed("밥");
         control.SetAllToNotUsed("반찬(메인)");
         control.SetAllToNotUsed("반찬(사이드)");
-        Intent intent = new Intent(this, CreateDiet.class);
-        startActivityForResult(intent, CREATE_DIET);
+
+        Intent intent1 = new Intent(this, CreateDiet.class);
+        startActivityForResult(intent1, CREATE_DIET);
+
+        Intent intent2 = new Intent(this, CreateDiet.class);
+        startActivityForResult(intent2, CREATE_DIET);
+
+        Intent intent3 = new Intent(this, CreateDiet.class);
+        startActivityForResult(intent3, CREATE_DIET);
+
+        Intent intent4 = new Intent(this, CreateDiet.class);
+        startActivityForResult(intent4, CREATE_DIET);
+
+        Intent intent5 = new Intent(this, CreateDiet.class);
+        startActivityForResult(intent5, CREATE_DIET);
+
+        Intent intent6 = new Intent(this, CreateDiet.class);
+        startActivityForResult(intent6, CREATE_DIET);
+
+        Intent intent7 = new Intent(this, CreateDiet.class);
+        startActivityForResult(intent7, CREATE_DIET);
 
     }
     // 식단정보 받아와서 GridLayout에 세팅
