@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.test);
 
         textview1Breakfast = findViewById(R.id.textview1Breakfast);
         textview1Lunch = findViewById(R.id.textview1Lunch);
@@ -131,6 +131,9 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(intent7, CREATE_DIET);
 
     }
+
+
+
     // 식단정보 받아와서 GridLayout에 세팅
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

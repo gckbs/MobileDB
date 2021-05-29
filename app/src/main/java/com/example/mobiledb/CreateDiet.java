@@ -18,8 +18,8 @@ public class CreateDiet extends AppCompatActivity{
     private int what_time_maindish = 0;
     private int what_time_sidedish = 0;
 
-    private int flag_carbo = 200;
-    private int flag_protein = 150;
+    private int flag_carbo = 300;
+    private int flag_protein = 100;
     private int flag_fat = 50;
     private double target_protein = 0;
     private double target_carbo = 0;

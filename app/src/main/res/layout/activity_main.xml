@@ -1,297 +1,308 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="#7cfc00"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="#BBFF3300">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_height="match_parent"
             android:layout_weight="1"
+            android:alignmentMode="alignBounds"
             android:columnCount="4"
-            android:alignmentMode="alignBounds">
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
                 android:layout_gravity="fill_horizontal"
-                android:background="@drawable/time_edge"
-                android:layout_columnWeight="1" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="아침"
-                android:layout_gravity="fill_horizontal"
-                android:gravity="center_horizontal"
-                android:background="@drawable/time_edge"
-                android:layout_columnWeight="3"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="점심"
-                android:layout_gravity="fill_horizontal"
-                android:gravity="center_horizontal"
-                android:background="@drawable/time_edge"
-                android:layout_columnWeight="3"/>
+                android:background="@drawable/time_edge" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="3"
                 android:layout_gravity="fill_horizontal"
-                android:gravity="center_horizontal"
                 android:background="@drawable/time_edge"
+                android:gravity="center_horizontal"
+                android:text="아침"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="3"
+                android:layout_gravity="fill_horizontal"
+                android:background="@drawable/time_edge"
+                android:gravity="center_horizontal"
+                android:text="점심" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="3"
+                android:layout_gravity="fill_horizontal"
+                android:background="@drawable/time_edge"
+                android:gravity="center_horizontal"
                 android:text="저녁" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:background="@drawable/day_edge"
                 android:layout_gravity="fill_vertical"
-                android:text="월요일"/>
+                android:background="@drawable/day_edge"
+                android:gravity="center_vertical"
+                android:text="월요일" />
+
             <TextView
                 android:id="@+id/textview1Breakfast"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_gravity="fill"
                 android:background="@drawable/edge"
+                android:gravity="center_horizontal"
                 android:text="BREAKFAST"/>
+
             <TextView
                 android:id="@+id/textview1Lunch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_gravity="fill"
                 android:background="@drawable/edge"
-                android:text="LUNCH"/>
+                android:gravity="center_horizontal"
+                android:text="LUNCH" />
+
             <TextView
                 android:id="@+id/textview1Dinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_gravity="fill"
                 android:background="@drawable/edge"
-                android:text="DINNER"/>
-
+                android:gravity="center_horizontal"
+                android:text="DINNER" />
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:background="@drawable/day_edge"
                 android:layout_gravity="fill_vertical"
-                android:text="화요일"/>
+                android:background="@drawable/day_edge"
+                android:gravity="center_vertical"
+                android:text="화요일" />
+
             <TextView
                 android:id="@+id/textview2Breakfast"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_gravity="fill"
                 android:background="@drawable/edge"
+                android:gravity="center_horizontal"
                 android:text="BREAKFAST"/>
+
             <TextView
                 android:id="@+id/textview2Lunch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_gravity="fill"
                 android:background="@drawable/edge"
-                android:text="LUNCH"/>
+                android:gravity="center_horizontal"
+                android:text="LUNCH" />
+
             <TextView
                 android:id="@+id/textview2Dinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_gravity="fill"
                 android:background="@drawable/edge"
+                android:gravity="center_horizontal"
                 android:text="DINNER"/>
-
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:background="@drawable/day_edge"
                 android:layout_gravity="fill_vertical"
-                android:text="수요일"/>
+                android:background="@drawable/day_edge"
+                android:gravity="center_vertical"
+                android:text="수요일" />
+
             <TextView
                 android:id="@+id/textview3Breakfast"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_gravity="fill"
                 android:background="@drawable/edge"
+                android:gravity="center_horizontal"
                 android:text="BREAKFAST"/>
+
             <TextView
                 android:id="@+id/textview3Lunch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_gravity="fill"
                 android:background="@drawable/edge"
-                android:text="LUNCH"/>
+                android:gravity="center_horizontal"
+                android:text="LUNCH" />
+
             <TextView
                 android:id="@+id/textview3Dinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_gravity="fill"
                 android:background="@drawable/edge"
+                android:gravity="center_horizontal"
                 android:text="DINNER"/>
-
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:background="@drawable/day_edge"
                 android:layout_gravity="fill_vertical"
-                android:text="목요일"/>
+                android:background="@drawable/day_edge"
+                android:gravity="center_vertical"
+                android:text="목요일" />
 
             <TextView
                 android:id="@+id/textview4Breakfast"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_gravity="fill"
                 android:background="@drawable/edge"
-                android:text="BREAKFAST"/>
+                android:gravity="center_horizontal"
+                android:text="BREAKFAST" />
+
             <TextView
                 android:id="@+id/textview4Lunch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_gravity="fill"
                 android:background="@drawable/edge"
+                android:gravity="center_horizontal"
                 android:text="LUNCH"/>
+
             <TextView
                 android:id="@+id/textview4Dinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_gravity="fill"
                 android:background="@drawable/edge"
+                android:gravity="center_horizontal"
                 android:text="DINNER"/>
-
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:background="@drawable/day_edge"
                 android:layout_gravity="fill_vertical"
-                android:text="금요일"/>
+                android:background="@drawable/day_edge"
+                android:gravity="center_vertical"
+                android:text="금요일" />
 
             <TextView
                 android:id="@+id/textview5Breakfast"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_gravity="fill"
                 android:background="@drawable/edge"
-                android:text="BREAKFAST"/>
+                android:gravity="center_horizontal"
+                android:text="BREAKFAST" />
+
             <TextView
                 android:id="@+id/textview5Lunch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_gravity="fill"
                 android:background="@drawable/edge"
+                android:gravity="center_horizontal"
                 android:text="LUNCH"/>
+
             <TextView
                 android:id="@+id/textview5Dinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_gravity="fill"
                 android:background="@drawable/edge"
-                android:text="DINNER"/>
-
+                android:gravity="center_horizontal"
+                android:text="DINNER" />
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:background="@drawable/day_edge"
                 android:layout_gravity="fill_vertical"
-                android:text="토요일"/>
+                android:background="@drawable/day_edge"
+                android:gravity="center_vertical"
+                android:text="토요일" />
 
             <TextView
                 android:id="@+id/textview6Breakfast"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_gravity="fill"
                 android:background="@drawable/edge"
+                android:gravity="center_horizontal"
                 android:text="BREAKFAST"/>
+
             <TextView
                 android:id="@+id/textview6Lunch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_gravity="fill"
                 android:background="@drawable/edge"
+                android:gravity="center_horizontal"
                 android:text="LUNCH"/>
+
             <TextView
                 android:id="@+id/textview6Dinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_gravity="fill"
                 android:background="@drawable/edge"
-                android:text="DINNER"/>
-
+                android:gravity="center_horizontal"
+                android:text="DINNER" />
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:background="@drawable/day_edge"
                 android:layout_gravity="fill_vertical"
-                android:text="일요일"/>
+                android:background="@drawable/day_edge"
+                android:gravity="center_vertical"
+                android:text="일요일" />
 
             <TextView
                 android:id="@+id/textview7Breakfast"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_gravity="fill"
                 android:background="@drawable/edge"
-                android:text="BREAKFAST"/>
+                android:gravity="center_horizontal"
+                android:text="BREAKFAST" />
+
             <TextView
                 android:id="@+id/textview7Lunch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_gravity="fill"
                 android:background="@drawable/edge"
+                android:gravity="center_horizontal"
                 android:text="LUNCH"/>
+
             <TextView
                 android:id="@+id/textview7Dinner"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
                 android:layout_gravity="fill"
                 android:background="@drawable/edge"
+                android:gravity="center_horizontal"
                 android:text="DINNER"/>
 
         </GridLayout>
@@ -299,4 +310,4 @@
     </LinearLayout>
 
 
-</LinearLayout>
+</ScrollView>

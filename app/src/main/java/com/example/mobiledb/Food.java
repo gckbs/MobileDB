@@ -35,9 +35,9 @@ public class Food {
                     if (category == "밥")
                         setNum((int) (Math.random() * 25));
                     else if (category == "반찬(메인)")
-                        setNum((int) (Math.random() * 448));
+                        setNum((int) (Math.random() * 447));
                     else if (category == "반찬(사이드)")
-                        setNum((int) (Math.random() * 267));
+                        setNum((int) (Math.random() * 265));
                     else{
                         Log.d("error", "Food_category_error");
                         return;
